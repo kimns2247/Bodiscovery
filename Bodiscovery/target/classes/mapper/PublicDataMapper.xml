@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.project.user.service.dao.PublicDataDAO">
+<!--  여기서 sawonVO 가 뭘 의미하는 지는 mybatis-config.xml 에서 정의  -->
+	<select id="getList" parameterType="publicDataVO" resultType="publicDataVO">
+		SELECT 
+			   id            AS id        
+		     , type          AS type
+		     , name          AS name
+		     , addr          AS addr
+		     , open          AS open
+		     , close         AS close
+			 , tel           AS tel
+			 , register_date AS registerDate
+			 , CASE
+			 	WHEN type = 'tennis' THEN '테니스장'
+			 	WHEN type = 'gateBall' THEN '게이트볼장'
+			 	WHEN type = 'health' THEN '헬스장'
+			 	WHEN type = 'swim' THEN '수영장'
+			 	WHEN type = 'football' THEN '풋살장'
+			    ELSE ''
+			  END typeName
+		  FROM PUBLIC_DATA
+		 WHERE 1=1
+		 
+		<if test='searchType != null and  searchType != "" '>
+			<![CDATA[ AND type = #{searchType, jdbcType=VARCHAR} ]]>
+		</if>
+		<if test='searchWord != null and  searchWord != "" '>
+			<![CDATA[ AND name LIKE '%' || #{searchWord, jdbcType=VARCHAR} ||  '%']]>
+		</if>
+	  ORDER BY register_date DESC
+	</select>
+	<select id="getPagingList" parameterType="publicDataVO" resultType="publicDataVO">
+		<![CDATA[ 
+		SELECT  *
+			FROM  (
+					SELECT ROWNUM RNUM, ALL_LIST.*
+					FROM  (SELECT 
+                                   id            AS id        
+                                 , type          AS type
+                                 , name          AS name
+                                 , addr          AS addr
+                                 , open          AS open
+                                 , close         AS close
+                                 , tel           AS tel
+                                 , register_date AS registerDate
+                                 , CASE
+                                    WHEN type = 'tennis' THEN '테니스장'
+                                    WHEN type = 'gateBall' THEN '게이트볼장'
+                                    WHEN type = 'health' THEN '헬스장'
+                                    WHEN type = 'swim' THEN '수영장'
+                                    WHEN type = 'football' THEN '풋살장'
+                                    ELSE ''
+                                  END typeName
+                                FROM public_data
+                                WHERE 1=1 
+		]]>
+					<if test='searchType != null and  searchType != "" '>
+						<![CDATA[ AND type = #{searchType, jdbcType=VARCHAR} ]]>
+					</if>
+					<if test='searchWord != null and  searchWord != "" '>
+						<![CDATA[ AND name LIKE '%' || #{searchWord, jdbcType=VARCHAR} ||  '%']]>
+					</if>
+		<![CDATA[ 
+                                ORDER BY ID DESC
+                        ) ALL_LIST
+			)
+			WHERE  RNUM  > ${firstRecord}
+			AND  RNUM <= ${firstRecord} + ${pageSize}
+		]]>
+	</select>
+	<select id="getListCnt" parameterType="publicDataVO" resultType="int">
+		SELECT 
+			   count(0)
+		  FROM PUBLIC_DATA
+		 WHERE 1=1
+		 
+		<if test='searchType != null and  searchType != "" '>
+			<![CDATA[ AND type = #{searchType, jdbcType=VARCHAR} ]]>
+		</if>
+		<if test='searchWord != null and  searchWord != "" '>
+			<![CDATA[ AND name LIKE '%' || #{searchWord, jdbcType=VARCHAR} ||  '%']]>
+		</if>
+	</select>
+	
+	<select id="detailPublicData" parameterType="publicDataVO" resultType="publicDataVO">
+		SELECT 
+			   id            AS id        
+		     , type          AS type
+             , CASE
+                WHEN type = 'tennis' THEN '테니스장'
+                WHEN type = 'gateBall' THEN '게이트볼장'
+                WHEN type = 'health' THEN '헬스장'
+                WHEN type = 'swim' THEN '수영장'
+                WHEN type = 'football' THEN '풋살장'
+                ELSE ''
+              END typeName
+		     , name          AS name
+		     , addr          AS addr
+		     , open          AS open
+		     , close         AS close
+			 , tel           AS tel
+			 , register_date AS registerDate
+		  FROM PUBLIC_DATA
+		 WHERE id = #{id, jdbcType=INTEGER}
+	</select>
+	
+	<select id="getMaxId" parameterType="publicDataVO" resultType="int">
+		SELECT 
+			   Max(id)+1    
+		  FROM PUBLIC_DATA
+	</select>
+	
+	<insert id="insertPublicData" parameterType="publicDataVO">
+		INSERT INTO PUBLIC_DATA(    
+		       id 
+		     , type
+		     , name
+		     , addr
+		     , open
+		     , close
+			 , tel
+			 , register_date
+		) VALUES (
+		       #{id, jdbcType=INTEGER}
+		     , #{type, jdbcType=VARCHAR}
+		     , #{name, jdbcType=VARCHAR}
+		     , #{addr, jdbcType=VARCHAR}
+		     , #{open, jdbcType=VARCHAR}
+		     , #{close, jdbcType=VARCHAR}
+			 , #{tel, jdbcType=VARCHAR}
+			 , SYSDATE
+		)
+	</insert>
+	
+	<update id="updatePublicData" parameterType="publicDataVO">
+		UPDATE PUBLIC_DATA
+		   SET    
+		       type  = #{type, jdbcType=VARCHAR}
+		     , name  = #{name, jdbcType=VARCHAR}
+		     , addr  = #{addr, jdbcType=VARCHAR}
+		     , open  = #{open, jdbcType=VARCHAR}
+		     , close = #{close, jdbcType=VARCHAR}
+			 , tel   = #{tel, jdbcType=VARCHAR}
+		 WHERE id = #{id, jdbcType=INTEGER}
+	</update>
+	
+	
+	<delete id="deletePublicData" parameterType="publicDataVO">
+		DELETE FROM PUBLIC_DATA
+		 WHERE id = #{id, jdbcType=INTEGER}
+	</delete>
+</mapper>

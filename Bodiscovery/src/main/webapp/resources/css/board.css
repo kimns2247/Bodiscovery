@@ -1,0 +1,134 @@
+@CHARSET "UTF-8";
+h2{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+ol, ul{list-style: none}
+table{border-collapse:collapse;border-spacing:0}
+hr,legend,caption{font-size:0;height:0px}
+a{text-decoration:none;color:inherit}
+a:hover{text-decoration:none}
+img{vertical-align:middle;font-size:11px}
+select{vertical-align:middle}
+textarea{line-height:18px;font-size:12px;color:inherit}
+.wrap{width:800px;margin:0 auto}
+
+/** boardSearch **/
+.board_search{margin-top: 10px; margin-bottom:30px;text-align:center;}
+.board_search > li{display:inline-block; font-size:11px}
+*:first-child+html .board_search > li{display:inline}
+.board_search > li > *{vertical-align:middle}
+.board_search > li input[type="text"]{width:450px;padding: 0 5px;height: 45px;color:#808080;line-height: 35px;border:solid 3.5px #000000;min-width: 225px;font-size: 14px; border-radius: 13px;}
+.board_search > li input[type="radio"]{margin:2px 2px 0 0}
+.board_search > li input[type="submit"]{margin:0;padding:0;width: 65px;height: 40px;font-size:14px;color:#fff;line-height: 35px;border:none;background:#333;cursor:pointer}
+.board_search > li label{margin:0 0 0 3px}
+.board_search > li select{border:3.5px solid #000000;padding: 8px 10px;min-width:100px;height: 45px;font-size: 14px; border-radius: 13px;}
+div#content{
+	background-color:lightgray;
+	display:none;
+	width:400px;
+}
+div#wapper{
+	position:relative;
+}
+
+/** table css **/
+.board_list{width:100%;border-top:2px solid #252525; font-size:12px;color:#777}
+.board_list thead tr th{height:30px;color:#fff;font-weight:bold;background:#333;vertical-align:middle}
+.board_list tbody tr td{padding:10px;text-align:center;line-height:18px;border-bottom:solid 1px #eee;vertical-align:middle}
+.board_list tbody tr .tLeft{text-align:center;}
+.board_list tbody tr td .tLeft{text-align:center;}
+.board_list tbody tr td a{color:#777}
+.board_list tbody .notice td{background:#f6f6f6}
+.board_list tbody tr:hover td{background:#fafafa}
+
+.listTable {width:100%;border-top:3.5px solid #252525; border-bottom:1px solid #ccc}
+.listTable thead th:first-child{background-image:none}
+.listTable thead th {font-size: 13px; border-bottom:1px solid #ccc;padding:12px 0 13px 0;color:#3b3a3a;vertical-align:middle;text-align: center; background-color: #f7f7f7;}
+.listTable tbody td {font-size: 13px; border-top:1px solid #ccc;padding:10px 0;text-align:center;vertical-align:middle}
+.listTable tbody tr:first-child td {border:none}
+.listTable tbody td.title {text-align:center; padding-left:20px}
+.listTable tbody td.tLeft{text-align:center;}
+.listTable tbody td a {display:inline-block}
+ 
+.writeTable {width:100%; border-top:2px solid #252525; border-bottom:1px solid #ccc; margin:10px 0 10px 0;table-layout: fixed;}
+.writeTable tbody th {height:32px;line-height: 32px; vertical-align:middle;text-align:left;background:#f7f7f7;color:#3b3a3a;font-size: 13px;font-weight: bold;padding:5px 0 5px 20px;border-bottom:1px solid #ccc;}
+.writeTable tbody th p {color:#ff0000;padding-left:5px;display:inline;}
+.writeTable tbody td {height:32px; line-height: 32px; padding-left:10px;  vertical-align:middle; text-align:left; background:#f7f7f7; color:#3b3a3a; font-size:13px; color:#666; border-bottom:1px solid #d7d7d7;background:#fff;}
+.writeTable tbody td input{height: 32px;line-height: 32px;min-width: 250px;float:left;font-size: 13px;color:#333;display:inline-block;border:1px solid #d7d7d7;margin: 2px 5px 2px 5px;padding: 6px;}
+.writeTable tbody td select{height: 32px;line-height: 32px;min-width: 250px;float:left;font-size: 13px;color:#333;display:inline-block;border:1px solid #d7d7d7;margin: 2px 5px 2px 5px;padding: 6px;}
+.writeTable tbody td label{height:26px;float:left; font-size:12px; color:#333; display:inline-block; margin-left:5px; padding-left:10px;}
+.writeTable tbody td radio{height:26px;float:left; font-size:12px; color:#333; display:inline-block;}
+.writeTable tbody td span{height:26px;float:left; font-size:12px; color:#333; display:inline-block;}
+.writeTable tbody td textarea {min-height:250px; width:98%; border-top:1px solid #ccc; border-bottom:1px solid #ccc; padding:10px 5px 10px 5px}
+.writeTable tbody td div{width:50%}
+/* file css */
+.bbs_file{}
+.bbs_file li{ list-style: disc;}
+.bbs_file li a{ color:#636d60;}
+
+.setFileForm{display: inline-block; width:100%; padding-left:5px;}
+.setFileForm li{float:left; width:100%;}
+.setFileForm li input{vertical-align:middle;}
+.setFileForm li label{display: table-cell; vertical-align:middle;}
+.setFileForm li a{display: table-cell; vertical-align:middle;}
+.setFileForm li div{ float:left; display: table-cell; vertical-align:middle;}
+
+.imgView {margin:5px;}
+.imgView img{ border:1px solid #d7d7d7;}
+
+/** pageNavi **/
+.page_navi{margin-top:15px;font-size:0;text-align:center}
+.page_navi *{display:inline-block;vertical-align:middle}
+.page_navi > a{margin:0 4px;padding:0 5px;height:24px;font-size:12px;color:#333;line-height:23px;border:solid 1px #ccc}
+.page_navi span{margin:0 10px}
+.page_navi span > *{padding:6px;font-size:14px;color:#777}
+.page_navi span > strong{color:#555;font-weight:bold;text-decoration:underline}
+
+.wdp_30 {width:30%}
+.wdp_40 {width:40%}
+.wdp_50 {width:50%}
+.wdp_70 {width:70%}
+.wdp_97 {width:97%}
+.wdp_98 {width:98%}
+.wdp_100 {width:100%}
+.textC{text-align:center !important; padding:5px 0 5px 0 !important;}
+
+/* button css */
+.btnWrap {width:100%; margin-top:5px; margin-bottom:10px; min-height:35px;}
+.listBtn {float:right; margin-left:5px; padding:5px 11px 5px 11px; color:#fff !important; display:inline-block; background-color:#333; border:1px solid #333; vertical-align:middle; cursor:pointer;}
+.writeBtn {float:right; margin-left:5px;  padding:5px 11px 5px 11px; color:#fff !important; display:inline-block; background-color:#656565; border:1px solid #656565; vertical-align:middle; cursor:pointer;}
+.deleteBtn {float:right; margin-left:5px;  padding:5px 11px 5px 11px; color:#fff !important; display:inline-block; background-color:#ccc; border:1px solid #ccc; vertical-align:middle; cursor:pointer;}
+
+
+/* reply css  */
+.replyDiv{width:100%; margin-top:20px;}
+.replyDiv .formDiv{width:100%; line-height:100px; height: 100px;}
+.replyDiv .formDiv textarea {min-height:100px; width:80%; border:1px solid #ccc;}
+.replyDiv .formDiv .replyInsertBtn {height:102px; width:19%; float:right; color:#fff !important; display:inline-block; background-color:#656565; border:1px solid #656565; vertical-align:middle; text-align:center; font-size:22px; cursor:pointer;}
+.replyDiv .replyTable {width:100%; border-top:1px solid #ccc;  border-bottom:1px solid #ccc; table-layout: fixed;}
+.replyDiv .replyTable tbody th {height:30px;  vertical-align:middle; text-align:left; background:#f7f7f7; color:#3b3a3a; font-size:12px; padding:5px 0 5px 20px; border-bottom:1px solid #ccc;}
+.replyDiv .replyTable tbody th p {color:#ff0000;padding-left:5px;display:inline;}
+.replyDiv .replyTable tbody td {height:30px;vertical-align:middle; text-align:left; background:#f7f7f7; color:#3b3a3a; font-size:12px; color:#666; border-bottom:1px solid #d7d7d7;background:#fff;}
+.replyDiv .replyTable tbody td input{height:26px;float:left; font-size:12px; color:#333; display:inline-block; border:1px solid #d7d7d7; margin:2px 5px 2px 5px;}
+.replyDiv .replyTable tbody td label{height:26px;float:left; font-size:12px; color:#333; display:inline-block; margin-left:5px; padding-left:10px;}
+.replyDiv .replyTable tbody td radio{height:26px;float:left; font-size:12px; color:#333; display:inline-block;}
+.replyDiv .replyTable tbody td textarea{height:80px; width:100%; border:1px solid #ccc; }
+
+.date{font-size:10px; color:#ccc;}
+
+.replyRowDiv{width:100%;}
+.replyContentDiv {width:73%; float:left;}
+.replyInfoDiv {width:12%; float:left;}
+.replyBtnDiv {width:15%; float:left; line-height:15px;}
+.replyRepltBtn {height:15px !important; float:right; margin-left:3px; padding:3px 7px 3px 7px; color:#fff !important; display:inline-block; font-size:10px; background-color:#333; border:1px solid #333; vertical-align:middle; cursor:pointer;}
+.replyUpdateBtn {height:15px !important; float:right; margin-left:3px;  padding:3px 7px 3px 7px; color:#fff !important; display:inline-block; font-size:10px;  background-color:#656565; border:1px solid #656565; vertical-align:middle; cursor:pointer;}
+.replyDeleteBtn {height:15px !important; float:right; margin-left:3px;  padding:3px 7px 3px 7px; color:#fff !important; display:inline-block; font-size:10px;  background-color:#ccc; border:1px solid #ccc; vertical-align:middle; cursor:pointer;}
+
+.replyUpUpdateBtn {height:15px !important; float:right; margin-left:3px; margin-top:5px; margin-bottom:5px; padding:5px 10px 5px 10px; color:#fff !important; display:inline-block; font-size:12px;  background-color:#656565; border:1px solid #656565; vertical-align:middle; cursor:pointer;}
+.replyUpCancelBtn {height:15px !important; float:right; margin-left:3px; margin-top:5px; margin-bottom:5px; padding:5px 10px 5px 10px; color:#fff !important; display:inline-block; font-size:12px;  background-color:#ccc; border:1px solid #ccc; vertical-align:middle; cursor:pointer;}
+
+/* password  css */
+.passwordTable {width:100%; border:2px solid #252525; margin:30px 0 10px 0;table-layout: fixed;}
+.passwordTable tbody td{padding:20px; text-align:center;}
+.passwordTable tbody td p{font-size:12px; color:#333;}
+.passwordTable tbody td input{height:26px; font-size:12px; color:#333; display:inline-block; border:1px solid #d7d7d7; margin:2px 5px 2px 5px;}
+.passwordTable tbody td .list{ margin-top:10px; padding:5px 11px 5px 11px; color:#fff !important; display:inline-block; background-color:#333; border:1px solid #333; vertical-align:middle; cursor:pointer;}
+.passwordTable tbody td .check{ margin-top:10px; margin-left:3px; padding:5px 11px 5px 11px; color:#fff !important; display:inline-block; background-color:#656565; border:1px solid #656565; vertical-align:middle; cursor:pointer;}

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.project.user.service.dao.HealthDAO">
+	
+	<!-- 상품 전체 보기 -->
+	<select id="getAllItem" resultType="healthVO">
+    	SELECT item_No, item_Name, item_Qty, item_Price
+    	FROM healthitem
+	</select>
+
+	<!-- 상품 1개 보기 -->
+	<select id="ItemGet" parameterType="java.lang.String" resultType="healthVO">
+    	SELECT * FROM healthitem WHERE item_name = #{item_Name, jdbcType=VARCHAR}
+	</select>
+	
+	<!-- 장바구니 추가 -->
+	<insert id="CartAdd" parameterType="healthVO"> <!-- id 와 item_no 를 기준으로 누적 -->
+		<![CDATA[
+		MERGE INTO itemcart ic
+		USING dual
+		ON (ic.id = #{id} AND ic.item_No = #{item_No})
+		WHEN MATCHED THEN
+			UPDATE SET ic.cnt = ic.cnt + #{cnt}
+		WHEN NOT MATCHED THEN
+			INSERT (id, item_No, item_Name, cnt, item_Price)
+			VALUES (#{id}, #{item_No}, #{item_Name}, #{cnt}, #{item_Price})
+		]]>
+	</insert>
+	
+	<!-- 장바구니 보기 -->
+	<select id="CartView" resultType="healthVO">
+		SELECT * FROM itemcart WHERE id = #{id}
+	</select>
+	
+	<insert id = "insertPurchase" parameterType = "merchantVO">
+   INSERT INTO insertPurchase VALUES ( #{merchant_uid, jdbcType=VARCHAR}, #{amount, jdbcType=VARCHAR}, #{name, jdbcType=VARCHAR}, #{pg, jdbcType=VARCHAR}, #{id, jdbcType=VARCHAR})
+   </insert>
+   
+   
+   <select id="Purchase_list" resultType="merchantVO">   
+      SELECT * FROM insertPurchase where id = #{id, jdbcType=VARCHAR}
+   </select>
+	
+	<!-- 장바구니 부분 삭제 -->
+   	<delete id="CartDel">
+      	DELETE FROM itemcart WHERE id = #{arg0} and ITEM_NO = #{arg1}
+   	</delete>
+	
+	<!-- 장바구니 전체 비우기 -->
+	<delete id="CartDelAll">
+		DELETE FROM itemcart WHERE id = #{id}
+	</delete>
+
+	<!-- 식단 보기 -->
+	<select id="MyMeal" resultType="healthVO">
+		SELECT * FROM diary1 <!-- WHERE id=#{id} -->
+	</select>
+	
+	
+<!--	
+	장바구니 수정
+	<update id="updateCart">
+		UPDATE itemcart SET cnt=#{cnt} WHERE id=#{id} AND item_No=#{item_No}
+	</update>
+	
+	장바구니 보기
+	<select id="viewCart" resultType="healthVO">
+    	SELECT * FROM itemcart
+    	WHERE id=#{id}
+	</select>
+	 -->
+</mapper>
+

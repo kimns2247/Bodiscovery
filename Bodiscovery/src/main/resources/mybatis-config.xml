@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+
+<configuration>
+
+	<settings>
+    	<setting name="jdbcTypeForNull" value="NULL" />
+    </settings>
+	
+
+	<typeAliases>
+		<typeAlias alias="userVO" type="com.project.user.vo.UserVO" />
+		<!-- type을 줄여서 sawonVO 라고 부를것이다 라고 써준문장. -->
+		
+		<typeAlias alias="healthVO" type="com.project.user.vo.HealthVO" />
+		
+		<typeAlias alias="merchantVO" type="com.project.user.vo.MerchantVO" />
+		
+		<typeAlias alias="diaryVO" type="com.project.user.vo.DiaryVO" />
+		
+		<typeAlias alias="SportVO" type="com.project.user.vo.SportVO" />
+		
+		
+		<!-- 장형진이 추가함 -->
+		
+		<typeAlias alias="publicDataVO" type="com.project.user.vo.PublicDataVO" />
+		
+		
+		<typeAlias alias="boardVO" type="com.project.board.vo.BoardVO" />
+
+		<typeAlias alias="replyVO" type="com.project.board.vo.ReplyVO" />
+		
+		<typeAlias alias="Criteria" type="com.project.board.vo.Criteria" />
+		
+	</typeAliases>
+</configuration>

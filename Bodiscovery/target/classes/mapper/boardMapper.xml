@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.board.service.dao.BoardDAO">
+
+<select id = "boardList" resultType = "BoardVO">
+	
+		SELECT   BNO
+			   , TITLE
+			   , ID
+			   , REGDATE
+			   , VIEWCNT
+			   
+		  FROM BD_BOARD
+		  ORDER BY BNO DESC
+	
+</select>
+
+
+<select id = "boardListpage" resultType = "BoardVO" parameterType = "Criteria">
+
+	SELECT  	 BNO
+			   , TITLE
+			   , ID
+			   , REGDATE
+			   , VIEWCNT
+			   
+		FROM (
+		  		 SELECT	 BNO
+		  		 	   , TITLE
+		  		 	   , ID
+		  		 	   , REGDATE
+		  		 	   , VIEWCNT
+		  		 	   , ROW_NUMBER() OVER (ORDER BY BNO DESC) AS RNUM
+		  		 FROM BD_BOARD
+		  		 			   ) BD
+		  		 WHERE RNUM BETWEEN #{rowStart} AND #{rowEnd}
+		  ORDER BY BNO DESC
+</select>
+
+
+<select id ="listCount" resultType = "int">
+<![CDATA[
+	SELECT COUNT (BNO)
+	  FROM BD_BOARD
+	  WHERE BNO > 0
+]]>
+</select>
+
+<insert id = "boardWrite">
+	INSERT INTO BD_BOARD(    	BNO 
+	   					      , TITLE 
+	   					      , CONTENT 
+	   					      , ID
+	   					      , FILENAME  )
+	                 VALUES(    BD_BOARD_SEQ.NEXTVAL 
+	                 		  , #{title}
+	                 		  , #{content}
+	                 		  , #{id}
+	                 		  , #{filename}  )
+	
+
+</insert>
+
+<select id = "getBoard" parameterType = "int" resultType = "BoardVO">
+
+SELECT			BNO
+			  , TITLE
+			  , CONTENT
+			  , ID
+			  , REGDATE
+			  , VIEWCNT
+			  , FILENAME
+		 FROM BD_BOARD
+		 WHERE BNO = #{bno}
+
+</select>
+
+
+
+<select id = "toBoardUpdate" parameterType = "int" resultType = "BoardVO">
+
+SELECT			BNO
+			  , TITLE
+			  , CONTENT
+			  , ID
+			  , REGDATE
+			  , FILENAME
+		 FROM BD_BOARD
+		 WHERE BNO = #{bno}
+
+</select>
+
+
+
+<update id = "boardUpdate">
+	UPDATE BD_BOARD
+		SET TITLE	=	#{title},
+			CONTENT =	#{content},
+			FILENAME = #{filename}
+	WHERE BNO = #{bno}
+</update>
+
+<delete id = "boardDelete">
+	DELETE FROM BD_BOARD
+	WHERE BNO = #{bno}
+</delete>
+
+
+
+<update id = "viewCount" parameterType = "int">
+	UPDATE BD_BOARD SET
+	VIEWCNT = VIEWCNT + 1
+	WHERE BNO = #{bno}
+</update>
+
+<select id = "count" resultType = "int">
+SELECT count(bno) FROM BD_BOARD
+</select>
+
+
+
+</mapper>

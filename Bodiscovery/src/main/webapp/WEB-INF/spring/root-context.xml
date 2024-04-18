@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd">
+
+  <!-- 나는 root-context.xml 이라는 ~~~
+  
+  -->
+	<!-- 데이터베이스 연결 --> 
+<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" > 
+	<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/> 
+	 <property name="url" value="jdbc:oracle:thin:@localhost:1521:XE" />
+	<property name="username" value="hr"/> 
+	<property name="password" value="hr"/> 
+</bean>
+
+
+	<!-- SqlSessionFactory --> 
+<bean id="sqlSessionFactory"   class="org.mybatis.spring.SqlSessionFactoryBean"> 
+	<property name="dataSource" ref="dataSource" />
+	<property name="configLocation" value="classpath:/mybatis-config.xml" />
+	<property name="mapperLocations" value="classpath:/mapper/*.xml" />
+	                              <!-- resources 방 아래가 classpath:/ -->
+	<!-- configLocation :MyBatis 환경설정 파일  (src/main/resources)-->	 
+ 	<!-- mapperLocations : 매퍼파일인데 어디에 넣을까(src/main/resources/mapper/*.xml)-->
+ 
+</bean>
+
+ 	<!-- SqlSessionTemplate : spring-mybatis연동 ,--> 
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" > 
+		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" /> 
+	</bean>
+	
+		
+	<!-- mapper interface : mapping파일의 sql call을 위한 interface
+	  즉, mapping파일의 sql을 java interface로 호출하게 해줌   (cf. getMapper())-->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"> 
+		<property name="basePackage" value="com.project.*" />
+		  <!-- 이 패키지아래 모든 interface가 mapper interface로 인식  -->
+	        <!--  ArrayList <SawonVO> getAllSawon(); -->
+		</bean>
+
+	
+
+    <bean id="transactionManager" 
+	    class="org.springframework.jdbc.datasource.DataSourceTransactionManager"> 
+		<property name="dataSource" ref="dataSource" /> 
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager"/> 
+	
+	
+	<!-- 이메일 인증 관련 등록 -->
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+    <property name="host" value="smtp.naver.com"/>
+    <property name="port" value="465"/>
+    <property name="username" value="kimns2247"/>
+    <property name="password" value="dudgnsWkd10419@1"/>
+    
+    <!-- 보안연결 SSL과 관련된 설정 -->
+    <property name="javaMailProperties">
+        <props>
+          <prop key="mail.smtp.auth">true</prop>
+          <prop key="mail.smtp.starttls.enable">true</prop>
+          <prop key="mail.smtp.ssl.checkserveridentity">true</prop>
+          <prop key="mail.smtp.ssl.trust">*</prop>
+          <!-- <prop key="mail.debug">false</prop> -->
+         </props>
+     </property>
+</bean>
+	
+	
+	
+	
+	
+	
+	
+</beans>
+
+
+
+
+
+
+
+
+
+

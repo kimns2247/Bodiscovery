@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.project.user.service.dao.UserDAO">
+
+<select id ="getAllUser" resultType="userVO">  <!-- id는 getAllSawon으로 넘어와서 결과타입은 VO객체로 넘어간다. -->
+	SELECT id, pw, name, address, ki, weight, goal, sex, age, email
+	FROM userTable
+</select>
+
+<insert id="insertUserinfo">
+		INSERT INTO userTable
+		VALUES (#{id},#{pw},#{name},#{address},#{ki},#{weight},#{goal},#{sex},#{age},#{email})
+</insert>
+
+<select id="getUserinfo" resultType="userVO">
+SELECT id, name
+FROM userTable where name=#{name}
+</select>
+	
+<select id="findMemberId" resultType="userVO"> <!--  아이디 찾기 할 때 이름과 이메일로 아이디를 조회한다. -->
+
+select * from userTable where name = #{name} and email = #{email}
+</select>
+
+	
+<select id="userPwdCheck" parameterType="userVO" resultType="java.lang.Integer"> <!--  비밀번호 찾기할 때 아이디와 이름과 이메일로 비밀번호를 조회한다. -->
+select count(*) from userTable where name = #{name} and email = #{email} and id = #{id}
+</select>
+
+
+<update id="passwordUpdate">
+ UPDATE userTable set pw = #{pw} 
+ where name = #{name} and email = #{email} and id = #{id}
+</update>
+
+	
+<!--  비밀번호를 찾고 비밀번호를 수정한다.  -->
+<update id="userUpdate"> 
+		UPDATE userTable 
+		SET id = #{id},pw = #{pw}, name = #{name}, address = #{address},
+		ki = #{ki}, weight = #{weight}, goal = #{goal}, sex = #{sex}, age = #{age},
+		email = #{email} 
+		WHERE id = #{id} 
+</update>
+
+<delete id="userDelete">
+DELETE from userTable 
+WHERE id = #{id}
+</delete>
+
+<select id="login" resultType="userVO">
+		select * from userTable
+		where id = #{id}
+</select>
+
+<select id="kakaologin" resultType="userVO">
+		select * from userTable
+		where email = #{email}
+</select>
+
+
+<select id="idCheck" parameterType="String" resultType="int">
+		SELECT COUNT(id) FROM userTable WHERE id= #{id}
+</select>
+
+<select id="emailCheck" parameterType="String" resultType="int">
+		SELECT COUNT(email) FROM userTable WHERE email = #{email}
+</select>
+
+
+
+
+</mapper>
