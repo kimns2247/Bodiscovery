@@ -68,7 +68,7 @@
 </div>
 <br><br>
 
-- 구매내역 & 커뮤니티 페이지 <br>
+- 식단일지 & 커뮤니티 페이지 <br>
 <div>
 <img src="https://github.com/kimns2247/Bodiscovery/assets/64635483/c6ee17d9-4598-4fda-9d7d-acd4edf3c8d9.jpg" width="400" & height="400"></img>
 <img src="https://github.com/kimns2247/Bodiscovery/assets/64635483/5abd20fa-34ac-4f36-a107-d1b12a5720c2.jpg" width="400" & height="400"></img>
