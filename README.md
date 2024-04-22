@@ -40,13 +40,6 @@
 # 웹사이트 Usage
 <br>
 
-- 로그인 & 회원 가입 페이지<br>
-<div>
-<img src="https://github.com/kimns2247/Matdori/assets/64635483/6b81f8df-a1d5-49dc-a352-f0403d24f5a7.jpg" width="400" & height="400"></img>  
-<img src="https://github.com/kimns2247/Matdori/assets/64635483/74d18f78-d853-4328-b9f0-62ad019bac76.jpg" width="400" & height="400"></img>
-</div>
-<br><br>
-
 - 메인 & 로그인페이지<br>
 <div>   
 <img src="https://github.com/kimns2247/Bodiscovery/assets/64635483/1a1570a4-7ea0-408d-bea5-d9149356bd10.jpg" width="400" & height="400"></img>   
@@ -54,10 +47,10 @@
 </div>
 <br><br>
 
-- 결제 & 예약 내역 페이지 <br>
+- 회원가입 & ID,PW 찾기 <br>
 <div>
-<img src="https://github.com/kimns2247/Matdori/assets/64635483/22882949-c12b-4087-aa5a-91dff38f9f77.jpg" width="400" & height="400"></img> 
-<img src="https://github.com/kimns2247/Matdori/assets/64635483/49ad667a-98c1-4cbf-af8f-ab1af5ceac6c.jpg" width="400" & height="400"></img>
+<img src="https://github.com/kimns2247/Bodiscovery/assets/64635483/feb4b084-babd-479f-97e2-8f6a9d963e6f.jpg" width="400" & height="400"></img>
+<img src="https://github.com/kimns2247/Bodiscovery/assets/64635483/05732d4b-bea6-42fd-8959-09145ed9e3e6.jpg" width="400" & height="400"></img> 
 </div>
 <br><br>
 
