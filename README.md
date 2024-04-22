@@ -10,6 +10,7 @@
           <img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jQuery&logoColor=white">
           <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=Oracle&logoColor=white">
           <br/><img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white">
+            <img src="https://img.shields.io/badge/Mybatis-6DB33F?style=for-the-badge&logo=Spring&logoColor=black">
           </div>
     </div>
     
@@ -33,19 +34,6 @@
 - 팀원 김동현 : 상품 관련 기능, 장바구니, 간편로그인(카카오/네이버) 구현
 - 팀원 장형진 : 게시판, 간편로그인(카카오/네이버) 구현
 - 팀원 안희지 : 운동페이지(Kakao 지도 API), 운동 장소 관리자페이지 
-
-
-<details>
-<summary>
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Eyes.png" alt="Eyes" width="2%" /> 프로젝트 Technologies
-</summary>
-<img src="https://img.shields.io/badge/java-007396?style=flat-square&logo=java&logoColor=white"/>
-<img src="https://img.shields.io/badge/ORACLE-F80000?style=flat-square&logo=oracle&logoColor=white"/>
-<img src="https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jQuery&logoColor=white"/>
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
-<img src="https://img.shields.io/badge/Apache Tomcat-F8DC75?style=flat-square&logo=apachetomcat&logoColor=black"/>
-<img src="https://img.shields.io/badge/Eclipse-0067a3?style=flat-square&logo=Eclipse&logoColor=white"/>
-</details>
 
 <details>
 <summary>
