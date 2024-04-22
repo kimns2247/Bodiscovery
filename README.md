@@ -4,7 +4,6 @@
 
 <h1> Spring - Project - Bodiscovery </h1>
 
-<img src="https://github.com/kimns2247/Bodiscovery/assets/64635483/e129251a-61e3-456d-98cc-1e07a1568113.jpg" width="800" & height="300"></img> 
     
 # 프로젝트 소개
 - 건강에 관련된 식품 요소와, 헬스 및 운동 요소를 통합한 프로그램을 개발한다.
