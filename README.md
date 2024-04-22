@@ -54,10 +54,10 @@
 </div>
 <br><br>
 
-- 가게정보 & 게시판 - 댓글 페이지 <br>
+- 상품 & 장바구니 페이지 <br>
 <div>
-<img src="https://github.com/kimns2247/Matdori/assets/64635483/59f7465b-7fa7-49cf-931a-dff7f2e08bb6.jpg" width="400" & height="400"></img>
-<img src="https://github.com/kimns2247/Matdori/assets/64635483/f8518f28-5bb3-4358-a129-31059e4f8505.jpg" width="400" & height="400"></img>
+<img src="https://github.com/kimns2247/Bodiscovery/assets/64635483/e47e24bf-a114-4351-93e7-c89d29316d44.jpg" width="400" & height="400"></img>
+<img src="https://github.com/kimns2247/Bodiscovery/assets/64635483/79005378-f9fa-4eb3-8c93-5dae43c597fc.jpg" width="400" & height="400"></img>
 </div>
 <br><br><br><br><br>
 
