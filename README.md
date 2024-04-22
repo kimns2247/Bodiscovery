@@ -50,6 +50,7 @@
 - 아이디 찾기 & 마이페이지<br>
 <div>   
 <img src="https://github.com/kimns2247/Bodiscovery/assets/64635483/1a1570a4-7ea0-408d-bea5-d9149356bd10.jpg" width="400" & height="400"></img>   
+<img src="https://github.com/kimns2247/Bodiscovery/assets/64635483/cf75d4a5-4fea-4c81-8c02-936aaaceb602.jpg" width="400" & height="400"></img> 
 
 <img src="https://github.com/kimns2247/Matdori/assets/64635483/de2894e8-0600-4b88-aea8-b00f692e04aa.jpg" width="400" & height="400"></img> 
 <img src="https://github.com/kimns2247/Matdori/assets/64635483/3f182a4a-f4f6-4939-b37b-0d335103d59f.jpg" width="400" & height="400"></img>
