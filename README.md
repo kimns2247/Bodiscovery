@@ -62,8 +62,10 @@
 <br><br>
 
 - 구매내역 & 식단 페이지 <br>
+<div>
 <img src="https://github.com/kimns2247/Bodiscovery/assets/64635483/af3ffddf-e1b8-4e5b-a871-75599652043e.jpg" width="400" & height="400"></img>
 <img src="https://github.com/kimns2247/Bodiscovery/assets/64635483/b4ed63e7-e7c1-490a-8fdd-b4e6ce4c5a23.jpg" width="400" & height="400"></img>
+</div>
 <br><br><br>
 
 
