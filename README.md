@@ -1,7 +1,5 @@
-# Bodiscovery - Spring - Mybatis
 ![slice](https://capsule-render.vercel.app/api?type=slice&color=auto&height=200&text=Hi%20Bodiscovery👋&fontAlign=70&rotate=13&fontAlignY=25&desc=seulz'%20&descAlign=70.&descAlignY=44)
 
-![KakaoTalk_20240422_095425502-사이즈조절](https://github.com/kimns2247/Matdori/assets/64635483/4b81fcad-6335-4a1a-be99-b8e259743336)  
 
 # 프로젝트 소개
 - 예약, 결제, 위치정보 등의 기능을 제공하여 바쁜 일상 속에서 식사에 소요되는 시간을 줄이고자 하는 니즈에 부응하여 다양한 음식 선택이 가능합니다.
