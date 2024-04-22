@@ -21,7 +21,20 @@
 - <B>팀장 최영훈 :  로그인, 회원가입(Spring Security), ID찾기, PW찾기, 식단일지 , 통합 및 형상관리, 간편로그인 구현(카카오/네이버)</B>
 - 팀원 김동현 : 상품 관련 기능, 장바구니, 간편로그인(카카오/네이버) 구현
 - 팀원 장형진 : 게시판, 간편로그인(카카오/네이버) 구현
-- 팀원 안희지 : 운동페이지(Kakao 지도 API), 운동 장소 관리자페이지 
+- 팀원 안희지 : 운동페이지(Kakao 지도 API), 운동 장소 관리자페이지
+
+
+<h2 style="border-bottom: 1px solid #d8dee4; color: #282d33;"> 
+    🛠️ Project Stacks </h2> <br> 
+    <div style="margin: ; text-align: left;" "text-align: left;"> <img src="https://img.shields.io/badge/Apache Tomcat-F8DC75?style=for-the-badge&logo=Apache Tomcat&logoColor=white">
+          <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=Java&logoColor=white">
+          <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white">
+          <img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jQuery&logoColor=white">
+          <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=Oracle&logoColor=white">
+          <br/><img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white">
+            <img src="https://img.shields.io/badge/Mybatis-6DB33F?style=for-the-badge&logo=MYbatis&logoColor=black">
+          </div>
+    </div>
 
 <details>
 <summary>
