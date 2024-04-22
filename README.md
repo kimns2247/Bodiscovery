@@ -5,24 +5,7 @@
 <h1> Spring - Project - Bodiscovery </h1>
 
 ![image](https://github.com/kimns2247/Bodiscovery/assets/64635483/e129251a-61e3-456d-98cc-1e07a1568113)
-
-
-    <h2 style="border-bottom: 1px solid #d8dee4; color: #282d33;"> 
-    🛠️ Project Stacks </h2> <br> 
-    <div style="margin: ; text-align: left;" "text-align: left;"> <img src="https://img.shields.io/badge/Apache Tomcat-F8DC75?style=for-the-badge&logo=Apache Tomcat&logoColor=white">
-          <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=Java&logoColor=white">
-          <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white">
-          <img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jQuery&logoColor=white">
-          <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=Oracle&logoColor=white">
-          <br/><img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white">
-            <img src="https://img.shields.io/badge/Mybatis-6DB33F?style=for-the-badge&logo=MYbatis&logoColor=black">
-          </div>
-    </div>
     
-
-
-
-
 # 프로젝트 소개
 - 건강에 관련된 식품 요소와, 헬스 및 운동 요소를 통합한 프로그램을 개발한다.
 - 사용자들은 웹사이트에 접속하여 식단관리 및 체중관리 현황, 근처 헬스장 및 운동 시설 확인, 건강식품 구매 등의 활동을 할 수 있다.
