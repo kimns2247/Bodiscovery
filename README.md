@@ -47,7 +47,7 @@
 </div>
 <br><br>
 
-- 회원가입 & ID,PW 찾기 <br>
+- 회원가입 & ID,PW 재설정 <br>
 <div>
 <img src="https://github.com/kimns2247/Bodiscovery/assets/64635483/feb4b084-babd-479f-97e2-8f6a9d963e6f.jpg" width="400" & height="400"></img>
 <img src="https://github.com/kimns2247/Bodiscovery/assets/64635483/05732d4b-bea6-42fd-8959-09145ed9e3e6.jpg" width="400" & height="400"></img> 
