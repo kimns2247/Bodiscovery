@@ -1,6 +1,3 @@
-![slice](https://capsule-render.vercel.app/api?type=slice&color=auto&height=200&text=Hi%20Bodiscovery👋&fontAlign=70&rotate=13&fontAlignY=25&desc=seulz'%20&descAlign=70.&descAlignY=44)
-
-
 <div align= "center">
     <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=180&text=Bodiscovery&animation=fadeIn&fontColor=000000&fontSize=60" />
     </div>
